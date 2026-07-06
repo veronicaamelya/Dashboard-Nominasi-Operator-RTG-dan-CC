@@ -867,7 +867,7 @@ function goToApp() {
     renderUploadPane();
   }, 350);
 }
- 
+
 function backToCover() {
   document.getElementById('app').classList.add('app-hidden');
   document.getElementById('cover').style.display='flex';
