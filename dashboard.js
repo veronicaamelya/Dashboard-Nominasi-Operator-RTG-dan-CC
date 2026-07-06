@@ -855,3 +855,26 @@ function rThn(){
 // INIT
 // ═══════════════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', renderUploadPane);
+
+// ═══════════════════════════════════════════════════
+// COVER PAGE
+// ═══════════════════════════════════════════════════
+function goToApp() {
+  document.getElementById('cover').classList.add('cover-hide');
+  setTimeout(()=>{
+    document.getElementById('cover').style.display='none';
+    document.getElementById('app').classList.remove('app-hidden');
+    renderUploadPane();
+  }, 350);
+}
+ 
+function backToCover() {
+  document.getElementById('app').classList.add('app-hidden');
+  document.getElementById('cover').style.display='flex';
+  requestAnimationFrame(()=>document.getElementById('cover').classList.remove('cover-hide'));
+}
+ 
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', renderUploadPane);
